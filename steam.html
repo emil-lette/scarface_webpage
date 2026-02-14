@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Game Title - Store Page</title>
+
+<style>
+
+/* GLOBAL */
+body {
+  margin:0;
+  font-family: Arial, Helvetica, sans-serif;
+  background:#1b2838;
+  color:#c7d5e0;
+}
+
+.container {
+  width:1100px;
+  margin:auto;
+}
+
+/* TOP NAV */
+.topbar {
+  background:#171a21;
+  padding:15px 0;
+}
+
+.nav-row {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo {
+  font-size:22px;
+  font-weight:bold;
+  color:white;
+}
+
+nav a {
+  margin-left:20px;
+  color:#b8b6b4;
+  text-decoration:none;
+  font-size:14px;
+}
+
+nav a:hover {
+  color:#66c0f4;
+}
+
+.info-bar {
+  background:#2a475e;
+  padding:10px 0;
+  font-size:14px;
+}
+
+/* PAGE */
+.page {
+  padding:30px 0;
+}
+
+.breadcrumb {
+  font-size:12px;
+  color:#8f98a0;
+}
+
+.game-title {
+  margin-top:10px;
+  font-size:28px;
+  color:white;
+}
+
+/* PROMO STRIP */
+.promo-strip {
+  display:flex;
+  gap:10px;
+  margin:20px 0;
+}
+
+.promo-item {
+  flex:1;
+  height:80px;
+  background:#2a475e;
+}
+
+/* MAIN GRID */
+.main-grid {
+  display:flex;
+  gap:20px;
+}
+
+.left-column {
+  flex:3;
+}
+
+.right-column {
+  flex:1;
+}
+
+/* MEDIA */
+.media-player {
+  background:#16202d;
+  padding:15px;
+}
+
+.main-media {
+  height:350px;
+  background:#2a475e;
+}
+
+.thumbnails {
+  display:flex;
+  gap:10px;
+  margin-top:10px;
+}
+
+.thumb {
+  flex:1;
+  height:70px;
+  background:#2a475e;
+  cursor:pointer;
+}
+
+/* SECTION (About Game etc.) */
+.section {
+  background:#16202d;
+  padding:20px;
+  margin-top:30px;
+}
+
+/* BUTTON */
+.buy-btn {
+  display:inline-block;
+  margin-top:20px;
+  padding:10px 20px;
+  background:#5c7e10;
+  color:white;
+  font-weight:bold;
+  text-decoration:none;
+  border:none;
+  cursor:pointer;
+  text-align:center;
+}
+
+/* SIDE BOX */
+.side-box {
+  background:#16202d;
+  padding:15px;
+  margin-bottom:20px;
+}
+
+.side-image {
+  height:200px;
+  background:#2a475e;
+  margin-bottom:10px;
+}
+
+table {
+  width:100%;
+  border-collapse:collapse;
+  font-size:14px;
+}
+
+th, td {
+  padding:6px;
+  border-bottom:1px solid #2a475e;
+}
+
+th {
+  text-align:left;
+}
+
+a {
+  color:#66c0f4;
+  text-decoration:none;
+}
+
+a:hover {
+  text-decoration:underline;
+}
+
+</style>
+
+<script>
+function changeImage(src){
+  document.getElementById("mainShot").style.backgroundImage = `url(${src})`;
+}
+</script>
+
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container nav-row">
+    <div class="logo">STEAM</div>
+    <nav>
+      <a href="index.html">HOME</a>
+      <a href="landing.html">LANDING</a>
+      <a href="steam.html">STEAM</a>
+      <a href="shop.html">SHOP</a>
+    </nav>
+  </div>
+</header>
+
+<div class="info-bar">
+  <div class="container">
+    You're not signed in
+  </div>
+</div>
+
+<div class="container page">
+
+  <div class="breadcrumb">
+    All Games &gt; Genre &gt; Game Name
+  </div>
+
+  <h1 class="game-title">GAME TITLE</h1>
+
+  <div class="promo-strip">
+    <div class="promo-item"></div>
+    <div class="promo-item"></div>
+    <div class="promo-item"></div>
+    <div class="promo-item"></div>
+    <div class="promo-item"></div>
+  </div>
+
+  <div class="main-grid">
+
+    <!-- LEFT COLUMN -->
+    <div class="left-column">
+
+      <div class="media-player">
+        <div class="main-media" id="mainShot"></div>
+
+        <div class="thumbnails">
+          <div class="thumb" onclick="changeImage('https://via.placeholder.com/900x350/111111')"></div>
+          <div class="thumb" onclick="changeImage('https://via.placeholder.com/900x350/333333')"></div>
+          <div class="thumb" onclick="changeImage('https://via.placeholder.com/900x350/555555')"></div>
+          <div class="thumb" onclick="changeImage('https://via.placeholder.com/900x350/777777')"></div>
+        </div>
+      </div>
+
+      <!-- ABOUT THIS GAME -->
+      <div class="section">
+        <h2>About This Game</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo consequat.
+        </p>
+        <p>
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <a href="index.html" class="buy-btn">BUY NOW</a>
+      </div>
+
+    </div>
+
+    <!-- RIGHT SIDEBAR -->
+    <aside class="right-column">
+
+      <!-- SUMMARY -->
+      <div class="side-box">
+        <div class="side-image"></div>
+        <p>Short summary text about the game goes here.</p>
+      </div>
+
+      <!-- AGE RATING -->
+      <div class="side-box">
+        <h3>Age Rating (Germany)</h3>
+        <div style="height:120px; background:#2a475e;">
+          <!-- USK logo placeholder -->
+        </div>
+      </div>
+
+      <!-- LANGUAGES -->
+      <div class="side-box">
+        <h3>Languages</h3>
+        <table>
+          <tr><td>German / yes</td></tr>
+          <tr><td>English / yes</td></tr>
+          <tr><td>Japanese / yes</td></tr>
+        </table>
+      </div>
+
+      <!-- DETAILS -->
+      <div class="side-box">
+        <h3>Details</h3>
+        <p><strong>Title:</strong> GAME TITLE</p>
+        <p><strong>Genre:</strong> Action / Fighting</p>
+        <p><strong>Developers:</strong> <a href="retro.html">Emil, Emirhan, Dijan</a></p>
+        <p><strong>Release Date:</strong> 1987</p>
+      </div>
+
+    </aside>
+
+  </div>
+</div>
+
+</body>
+</html>

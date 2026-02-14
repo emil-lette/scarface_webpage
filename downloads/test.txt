@@ -1,0 +1,31 @@
+Test download klappt.
+
+So alles andere bennen:
+
+CLOTHING
+tony_cap.jpg
+street_combat_tshirt.jpg
+miami_hoodie.jpg
+
+PRINTS
+limited_art_print.jpg
+collector_poster.jpg
+
+ACCESORIES
+tony_lighter.jpg
+street_keychain.
+
+
+Ordnerstruktur (wichtig):
+
+shop.html
+steam.html
+downloads/
+    test_collectible.txt
+    tony_cap.jpg
+    street_combat_tshirt.jpg
+    miami_hoodie.jpg
+    limited_art_print.jpg
+    collector_poster.jpg
+    tony_lighter.jpg
+    street_keychain.jpg

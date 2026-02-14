@@ -1,0 +1,211 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #1b2838, #0e1621);
+  color: #c7d5e0;
+}
+
+.container {
+  width: 980px;
+  margin: auto;
+}
+
+/* ============================= */
+/* HEADER */
+/* ============================= */
+
+.topbar {
+  background: #171a21;
+  padding: 14px 0;
+  text-align: center;
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* NAVIGATION */
+
+.nav {
+  background: #171a21;
+  padding: 10px 0;
+  text-align: center;
+  border-top: 1px solid #2a475e;
+}
+
+.nav a {
+  margin: 0 20px;
+  font-size: 14px;
+  color: #b8b6b4;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.nav a:hover {
+  color: #ffffff;
+}
+
+.nav a.active {
+  color: #66c0f4;
+}
+
+/* ============================= */
+/* INFO BAR */
+/* ============================= */
+
+.info-bar {
+  background: #2a475e;
+  padding: 10px 0;
+  font-size: 13px;
+}
+
+/* ============================= */
+/* BREADCRUMB */
+/* ============================= */
+
+.breadcrumb {
+  margin-top: 20px;
+  font-size: 13px;
+  color: #8f98a0;
+}
+
+.game-title {
+  margin: 10px 0 20px 0;
+  font-size: 28px;
+}
+
+/* ============================= */
+/* PROMO STRIP */
+/* ============================= */
+
+.promo-strip {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.promo-item {
+  height: 80px;
+  flex: 1;
+  background: #2a475e;
+}
+
+/* ============================= */
+/* MAIN GRID */
+/* ============================= */
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 680px 280px;
+  gap: 20px;
+}
+
+/* MEDIA */
+
+.media-player {
+  background: #16202d;
+  padding: 10px;
+}
+
+.main-media {
+  height: 380px;
+  background: black;
+}
+
+.thumbnails {
+  display: flex;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.thumb {
+  flex: 1;
+  height: 70px;
+  background: #2a475e;
+}
+
+/* ============================= */
+/* BUY SECTION */
+/* ============================= */
+
+.buy-section {
+  margin-top: 20px;
+  background: #1b2838;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+.discount {
+  background: #4c6b22;
+  padding: 6px 8px;
+}
+
+.price {
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+button {
+  background: #5c7e10;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #6fa112;
+}
+
+/* ============================= */
+/* EVENTS */
+/* ============================= */
+
+.events {
+  margin-top: 30px;
+}
+
+.event-card {
+  height: 120px;
+  background: #1b2838;
+  margin-top: 10px;
+}
+
+/* ============================= */
+/* GENERIC SECTIONS */
+/* ============================= */
+
+.section {
+  margin-top: 30px;
+}
+
+.section h2 {
+  margin-bottom: 10px;
+}
+
+/* ============================= */
+/* SIDEBAR */
+/* ============================= */
+
+.right-column .side-box {
+  background: #1b2838;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.side-image {
+  height: 120px;
+  background: #2a475e;
+  margin-bottom: 10px;
+}
