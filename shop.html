@@ -14,37 +14,46 @@ body {
   color:#eee;
 }
 
-/* NINTENDO HEADER */
+/* HEADER */
 
 .topbar {
   background:#b00000;
-  padding:20px 0;
-  text-align:center;
+  padding:20px 40px;
   border-bottom:6px solid #7a0000;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 }
 
-.logo {
-  font-size:22px;
+.header-left img {
+  height:120px;
+  display:block;
+}
+
+.header-right {
+  display:flex;
+  flex-direction:column;
+  align-items:flex-end;
+}
+
+.header-title {
+  font-size:18px;
   color:white;
   letter-spacing:3px;
+  margin-bottom:15px;
 }
 
-.nav {
-  background:#cfcfcf;
-  padding:12px 0;
-  text-align:center;
-  border-bottom:4px solid #999;
-}
+/* NAV */
 
-.nav a {
+.header-nav a {
   text-decoration:none;
-  color:black;
-  margin:0 20px;
+  color:white;
+  margin-left:20px;
   font-size:10px;
 }
 
-.nav a:hover {
-  color:#b00000;
+.header-nav a:hover {
+  color:#ffe0e0;
 }
 
 /* SHOP */
@@ -175,14 +184,27 @@ function filterProducts(category, element) {
 
 <!-- HEADER -->
 <div class="topbar">
-  <div class="logo">nintendo shop</div>
-</div>
 
-<div class="nav">
-  <a href="index.html">home</a>
-  <a href="landing.html">landing</a>
-  <a href="steam.html">steam</a>
-  <a href="shop.html">shop</a>
+  <div class="header-left">
+    <a href="landing.html">
+      <img src="logo_img/testlogo.png" alt="Scarface Logo">
+    </a>
+  </div>
+
+  <div class="header-right">
+    <div class="header-title">
+      nintendo shop
+    </div>
+
+<!-- NAVIGATION-->
+    <div class="header-nav">
+      <a href="index.html">home</a>
+      <a href="landing.html">landing</a>
+      <a href="steam.html">steam</a>
+      <a href="shop.html">shop</a>
+    </div>
+  </div>
+
 </div>
 
 <!-- SHOP -->
