@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Production Gallery</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+<style>
+
+body {
+  margin:0;
+  background:#1a1a1a;
+  font-family:'Press Start 2P', cursive;
+  color:white;
+  text-align:center;
+  padding:40px 0;
+}
+
+/* TITLE */
+h1 {
+  font-size:14px;
+  margin-bottom:40px;
+}
+
+/* GRID */
+.gallery-grid {
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap:30px;
+  width:80%;
+  margin:auto;
+}
+
+/* NES FILE CARD */
+.file-card {
+  background:#b00000;
+  padding:20px;
+  border:6px solid #7a0000;
+  box-shadow:6px 6px 0 #000;
+  font-size:8px;
+  text-decoration:none;
+  color:white;
+  display:block;
+  transition:0.1s;
+}
+
+.file-card:hover {
+  background:#ff0000;
+}
+
+.file-card:active {
+  box-shadow:2px 2px 0 #000;
+  transform:translate(4px,4px);
+}
+
+/* BACK BUTTON */
+.back-btn {
+  display:inline-block;
+  margin-top:60px;
+  padding:15px 40px;
+  background:#444;
+  border:6px solid #222;
+  box-shadow:6px 6px 0 #000;
+  font-size:8px;
+  text-decoration:none;
+  color:white;
+}
+
+.back-btn:active {
+  box-shadow:2px 2px 0 #000;
+  transform:translate(4px,4px);
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>PRODUCTION FILES</h1>
+
+<div class="gallery-grid">
+
+  <a href="#" class="file-card">content1</a> <!-- Download links go here: href="link/to/file.pdf"-->
+  <a href="#" class="file-card">content2</a>
+  <a href="#" class="file-card">content3</a>
+  <a href="#" class="file-card">content4</a>
+  <a href="#" class="file-card">content5</a>
+
+
+</div>
+
+<a href="index.html" class="back-btn">BACK</a>
+
+</body>
+</html>
