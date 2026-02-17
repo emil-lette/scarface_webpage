@@ -80,21 +80,132 @@ body {
 
 <div class="menu">
 
-  <a class="button" href="steam.html">STEAM</a>
-  <a class="button" href="landing.html">LANDING</a>
-  <a class="button" href="shop.html">SHOP</a>
-  <a class="button" href="gallery.html">GALLERY / FILE DOWNLOAD</a>
+  <a class="button" href="landing.html">landing</a>
+  <a class="button" href="steam.html">steam</a>
+  <a class="button" href="shop.html">shop</a>
+  <a class="button" href="gallery.html">gallery</a>
 
 </div>
+<!-- PASSWORT ABFRAGE SCRIPT -->
 
 <script>
-const password = "scarface";
 
-const userInput = prompt("password:");
+const password = "scarface21";
 
-if (userInput !== password) {
-  document.body.innerHTML = "<div style='color:#ff2f92; font-family:monospace; font-size:20px;'>ACCESS DENIED</div>";
+/* Overlay erstellen */
+const overlay = document.createElement("div");
+overlay.style.position = "fixed";
+overlay.style.top = "0";
+overlay.style.left = "0";
+overlay.style.width = "100%";
+overlay.style.height = "100%";
+overlay.style.background = "#0b0f1a";
+overlay.style.display = "flex";
+overlay.style.flexDirection = "column";
+overlay.style.justifyContent = "center";
+overlay.style.alignItems = "center";
+overlay.style.zIndex = "9999";
+overlay.style.fontFamily = "'Press Start 2P', cursive";
+overlay.style.color = "#ff2f92";
+
+function showLogin() {
+  overlay.innerHTML = `
+    <div style="margin-bottom:30px;">password:</div>
+    <input type="password" id="pwInput"
+      style="
+        padding:15px;
+        border:4px solid #ff2f92;
+        background:#111827;
+        color:#00e5ff;
+        font-family:'Press Start 2P', cursive;
+        outline:none;
+        margin-bottom:25px;
+      ">
+    <button id="enterBtn"
+      style="
+        padding:14px 30px;
+        background:#ff2f92;
+        color:white;
+        border:6px solid #ff2f92;
+        box-shadow:6px 6px 0 #00e5ff;
+        font-family:'Press Start 2P', cursive;
+        cursor:pointer;
+      ">
+      login
+    </button>
+  `;
+
+  const input = document.getElementById("pwInput");
+  const enterBtn = document.getElementById("enterBtn");
+
+  input.focus();
+
+  function check() {
+    if(input.value === password){
+      overlay.remove();
+    } else {
+      showError();
+    }
+  }
+
+  input.addEventListener("keydown", function(e){
+    if(e.key === "Enter"){
+      check();
+    }
+  });
+
+  enterBtn.addEventListener("click", check);
+
+  enterBtn.addEventListener("mouseover", function(){
+    enterBtn.style.background = "#00e5ff";
+    enterBtn.style.borderColor = "#00e5ff";
+    enterBtn.style.color = "#000";
+  });
+
+  enterBtn.addEventListener("mouseout", function(){
+    enterBtn.style.background = "#ff2f92";
+    enterBtn.style.borderColor = "#ff2f92";
+    enterBtn.style.color = "#fff";
+  });
 }
+
+function showError(){
+  overlay.innerHTML = `
+    <div style="margin-bottom:30px; color:#ff2f92;">wrong password</div>
+    <button id="retryBtn"
+      style="
+        padding:14px 30px;
+        background:#ff2f92;
+        color:white;
+        border:6px solid #ff2f92;
+        box-shadow:6px 6px 0 #00e5ff;
+        font-family:'Press Start 2P', cursive;
+        cursor:pointer;
+      ">
+      try again
+    </button>
+  `;
+
+  const retry = document.getElementById("retryBtn");
+
+  retry.addEventListener("click", showLogin);
+
+  retry.addEventListener("mouseover", function(){
+    retry.style.background = "#00e5ff";
+    retry.style.borderColor = "#00e5ff";
+    retry.style.color = "#000";
+  });
+
+  retry.addEventListener("mouseout", function(){
+    retry.style.background = "#ff2f92";
+    retry.style.borderColor = "#ff2f92";
+    retry.style.color = "#fff";
+  });
+}
+
+document.body.appendChild(overlay);
+showLogin();
+
 </script>
 
 </body>
