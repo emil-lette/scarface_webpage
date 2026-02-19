@@ -228,7 +228,7 @@ body {
 <!-- ALL -->
 <div class="category">
   <div class="category-header" onclick="toggle(this)">Download all / link to onedrive</div>
-  <div class="category-content">
+  <div class="category-content" id="all-category">
     <div class="button-grid">
 
       <!-- ZIP DOWNLOAD -->
@@ -251,6 +251,7 @@ body {
   Developed by Emil and Emirhan
 </div>
 
+
 <script>
 
 function toggle(header) {
@@ -258,16 +259,19 @@ function toggle(header) {
   const content = header.nextElementSibling;
 
   allContents.forEach(c => {
-    if (c !== content) {
-      c.style.display = "none";
-    }
+    c.style.display = "none";
   });
 
-  content.style.display = content.style.display === "block" ? "none" : "block";
+  content.style.display = "block";
 }
 
-/* Open first category by default */
-document.querySelector(".category-content").style.display = "block";
+/* Open ALL category specifically */
+window.onload = function() {
+  const allSection = document.querySelector("#all-category");
+  if (allSection) {
+    allSection.style.display = "block";
+  }
+};
 
 </script>
 
