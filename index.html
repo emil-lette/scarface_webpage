@@ -4,16 +4,24 @@
 <meta charset="UTF-8">
 <title>Scarface – Main Menu</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
+
+/* ================= FONTS ================= */
+
+@font-face {
+  font-family: 'LTC Broadway';
+  src: url('fonts/ltc.woff2') format('woff2'),
+       url('fonts/ltc.woff') format('woff');
+}
 
 /* ================= GLOBAL ================= */
 
 body {
   margin:0;
   background:#0b0f1a;
-  font-family:'Press Start 2P', cursive;
+  font-family:'Oswald', sans-serif;
   display:flex;
   flex-direction:column;
   justify-content:center;
@@ -25,11 +33,11 @@ body {
 /* ================= LOGO ================= */
 
 .logo {
-  margin-bottom:60px;
+  margin-bottom:25px; /* closer to buttons */
 }
 
 .logo img {
-  height:160px;
+  height:120px; /* slightly smaller */
 }
 
 /* ================= MENU ================= */
@@ -42,20 +50,22 @@ body {
 
 .button {
   display:block;
-  width:280px;
-  margin:25px auto;
-  padding:18px 0;
-  background:#ff2f92;             /* Pink */
+  width:220px;              /* smaller width */
+  margin:18px auto;         /* tighter spacing */
+  padding:14px 0;           /* smaller padding */
+  background:#ff2f92;
   color:white;
   text-decoration:none;
-  font-size:11px;
+  font-size:15px;           /* smaller text */
+  font-weight:500;
+  text-transform:uppercase; /* CAPS */
   border:6px solid #ff2f92;
-  box-shadow:6px 6px 0 #00e5ff;    /* Türkis Shadow */
+  box-shadow:6px 6px 0 #00e5ff;
   transition:0.15s;
 }
 
 .button:hover {
-  background:#00e5ff;              /* Türkis Hover */
+  background:#00e5ff;
   border-color:#00e5ff;
   color:#000;
 }
@@ -70,29 +80,21 @@ body {
 
 <body>
 
-<!-- ================= LOGO ================= -->
-
 <div class="logo">
   <img src="logo_img/testlogo.png" alt="Scarface Logo">
 </div>
 
-<!-- ================= MENU ================= -->
-
 <div class="menu">
-
   <a class="button" href="landing.html">landing</a>
   <a class="button" href="steam.html">steam</a>
   <a class="button" href="shop.html">shop</a>
   <a class="button" href="gallery.html">gallery</a>
-
 </div>
-<!-- PASSWORT ABFRAGE SCRIPT -->
 
 <script>
 
 const password = "scarface21";
 
-/* Overlay erstellen */
 const overlay = document.createElement("div");
 overlay.style.position = "fixed";
 overlay.style.top = "0";
@@ -105,33 +107,36 @@ overlay.style.flexDirection = "column";
 overlay.style.justifyContent = "center";
 overlay.style.alignItems = "center";
 overlay.style.zIndex = "9999";
-overlay.style.fontFamily = "'Press Start 2P', cursive";
+overlay.style.fontFamily = "'Oswald', sans-serif";
 overlay.style.color = "#ff2f92";
 
 function showLogin() {
   overlay.innerHTML = `
-    <div style="margin-bottom:30px;">password:</div>
+    <div style="margin-bottom:25px; font-size:20px;">Password:</div>
     <input type="password" id="pwInput"
       style="
-        padding:15px;
+        padding:12px;
         border:4px solid #ff2f92;
         background:#111827;
         color:#00e5ff;
-        font-family:'Press Start 2P', cursive;
+        font-family:'Oswald', sans-serif;
+        font-size:16px;
         outline:none;
-        margin-bottom:25px;
+        margin-bottom:20px;
       ">
     <button id="enterBtn"
       style="
-        padding:14px 30px;
+        padding:12px 26px;
         background:#ff2f92;
         color:white;
         border:6px solid #ff2f92;
         box-shadow:6px 6px 0 #00e5ff;
-        font-family:'Press Start 2P', cursive;
+        font-family:'Oswald', sans-serif;
+        font-size:16px;
+        text-transform:uppercase;
         cursor:pointer;
       ">
-      login
+      Login
     </button>
   `;
 
@@ -171,18 +176,20 @@ function showLogin() {
 
 function showError(){
   overlay.innerHTML = `
-    <div style="margin-bottom:30px; color:#ff2f92;">wrong password</div>
+    <div style="margin-bottom:25px; color:#ff2f92; font-size:20px;">Wrong password</div>
     <button id="retryBtn"
       style="
-        padding:14px 30px;
+        padding:12px 26px;
         background:#ff2f92;
         color:white;
         border:6px solid #ff2f92;
         box-shadow:6px 6px 0 #00e5ff;
-        font-family:'Press Start 2P', cursive;
+        font-family:'Oswald', sans-serif;
+        font-size:16px;
+        text-transform:uppercase;
         cursor:pointer;
       ">
-      try again
+      Try again
     </button>
   `;
 

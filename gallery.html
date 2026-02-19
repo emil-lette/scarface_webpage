@@ -3,16 +3,20 @@
 <head>
 <title>Scarface Tonys Street Combat | Gallery</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
 
-/* ================= GLOBAL ================= */
+@font-face {
+  font-family: 'LTC Broadway';
+  src: url('fonts/ltc.woff2') format('woff2'),
+       url('fonts/ltc.woff') format('woff');
+}
 
 body {
   margin:0;
   background:#0b0f1a;
-  font-family:'Press Start 2P', cursive;
+  font-family:'Oswald', sans-serif;
   color:#e6faff;
 }
 
@@ -25,12 +29,10 @@ body {
   display:flex;
   justify-content:space-between;
   align-items:center;
+  text-transform:uppercase;
 }
 
-.header-left img {
-  height:120px;
-  display:block;
-}
+.header-left img { height:120px; }
 
 .header-right {
   display:flex;
@@ -39,101 +41,101 @@ body {
 }
 
 .header-title {
-  font-size:22px;
+  font-family:'LTC Broadway', serif;
+  font-size:26px;
   color:#ff2f92;
-  letter-spacing:4px;
   margin-bottom:15px;
-  text-shadow:0 0 10px rgba(255,47,146,0.6);
 }
 
 .header-nav a {
   text-decoration:none;
   color:#00e5ff;
   margin-left:25px;
-  font-size:12px;
-  transition:0.2s;
+  font-size:16px;
+  font-weight:500;
 }
 
-.header-nav a:hover {
-  color:#ffffff;
-  text-shadow:0 0 10px #00e5ff;
+.header-nav a:hover { color:#ffffff; }
+
+/* ================= DOWNLOAD CENTER TITLE ================= */
+
+.section-title {
+  width:1000px;
+  margin:60px auto 30px auto;
+  font-family:'LTC Broadway', serif;
+  font-size:28px;
+  color:#ff2f92;
 }
 
 /* ================= GALLERY ================= */
 
 .gallery-container {
-  width:1100px;
-  margin:80px auto;
-  text-align:center;
+  width:1000px;
+  margin:0 auto 80px auto;
 }
 
-.gallery-title {
-  font-size:16px;
+.category {
+  margin-bottom:25px;
+  background:#111827;
+  border:4px solid #1f2937;
+}
+
+.category-header {
+  padding:20px;
+  cursor:pointer;
+  font-family:'LTC Broadway', serif;
+  font-size:22px;
   color:#ff2f92;
-  margin-bottom:60px;
+  border-bottom:3px solid #1f2937;
 }
 
-.gallery-grid {
+.category-header:hover {
+  background:#1a2233;
+}
+
+.category-content {
+  display:none;
+  padding:25px;
+}
+
+.button-grid {
   display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap:40px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap:20px;
 }
 
-/* ================= ARCADE BUTTON STYLE (UPDATED) ================= */
-
-.file-card {
+.file-btn {
   display:flex;
   justify-content:center;
   align-items:center;
-  height: 60px;
-
+  height:45px;
   background:#ff2f92;
   color:white;
   text-decoration:none;
-  font-size:10px;
-
-  border:6px solid #ff2f92;
-  box-shadow:6px 6px 0 #00e5ff;
+  font-size:14px;
+  font-weight:500;
+  text-transform:uppercase;
+  border:5px solid #ff2f92;
+  box-shadow:5px 5px 0 #00e5ff;
   transition:0.15s;
 }
 
-.file-card:hover {
+.file-btn:hover {
   background:#00e5ff;
   border-color:#00e5ff;
   color:#000;
 }
 
-.file-card:active {
-  box-shadow:2px 2px 0 #00e5ff;
-  transform:translate(4px,4px);
+.onedrive-btn {
+  background:#093ec5;
+  border-color:#093ec5;
+  color:#ffffff;
 }
 
-/* ================= BACK BUTTON ================= */
-
-.back-btn {
-  display:inline-block;
-  margin-top:70px;
-  padding:18px 40px;
-
-  background:#ff2f92;
-  color:white;
-  text-decoration:none;
-  font-size:10px;
-
-  border:6px solid #ff2f92;
-  box-shadow:6px 6px 0 #00e5ff;
-  transition:0.15s;
-}
-
-.back-btn:hover {
+.onedrive-btn:hover {
   background:#00e5ff;
   border-color:#00e5ff;
-  color:#000;
-}
-
-.back-btn:active {
-  box-shadow:2px 2px 0 #00e5ff;
-  transform:translate(4px,4px);
+  color:black;
 }
 
 /* ================= FOOTER ================= */
@@ -142,9 +144,7 @@ body {
   margin-top:100px;
   padding:20px;
   background:#111827;
-  color:#00e5ff;
   text-align:center;
-  font-size:10px;
   border-top:6px solid #ff2f92;
 }
 
@@ -154,7 +154,6 @@ body {
 <body>
 
 <div class="topbar">
-
   <div class="header-left">
     <a href="index.html">
       <img src="logo_img/testlogo.png" alt="Scarface Logo">
@@ -162,10 +161,7 @@ body {
   </div>
 
   <div class="header-right">
-    <div class="header-title">
-      scarface gallery
-    </div>
-
+    <div class="header-title">scarface gallery</div>
     <div class="header-nav">
       <a href="landing.html">landing</a>
       <a href="steam.html">steam</a>
@@ -173,32 +169,107 @@ body {
       <a href="gallery.html">gallery</a>
     </div>
   </div>
+</div>
 
+<!-- DOWNLOAD CENTER TITLE -->
+<div class="section-title">
+  DOWNLOAD CENTER
 </div>
 
 <div class="gallery-container">
 
-  <div class="gallery-title">
-    GALLERY / FILE DOWNLOAD
+  <!-- MEDG -->
+  <div class="category">
+    <div class="category-header" onclick="toggle(this)">MedG: Oswald</div>
+    <div class="category-content">
+      <div class="button-grid">
+        <a href="downloads/gallery/01_medg/character_sprites.zip" class="file-btn">character sprites</a>
+        <a href="downloads/gallery/01_medg/backdrops.zip" class="file-btn">backdrops</a>
+        <a href="downloads/gallery/01_medg/posters.zip" class="file-btn">posters</a>
+        <a href="downloads/gallery/01_medg/merch.zip" class="file-btn">merch</a>
+        <a href="downloads/gallery/01_medg/download_all_medg.zip" class="file-btn">download all</a>
+      </div>
+    </div>
   </div>
 
-  <div class="gallery-grid">
-    <a href="#" class="file-card">character sprites</a>
-    <a href="#" class="file-card">backdrops</a>
-    <a href="#" class="file-card">3d content</a>
-    <a href="#" class="file-card">posters</a>
-    <a href="#" class="file-card">merch mockups</a>
-    <a href="#" class="file-card">unity content</a>
-    <a href="downloads/gallery/test.txt" class="file-card">test download button</a>
+  <!-- ANIM1 -->
+  <div class="category">
+    <div class="category-header" onclick="toggle(this)">Anim1: Kohlsdorf</div>
+    <div class="category-content">
+      <div class="button-grid">
+        <a href="downloads/gallery/02_anim1/unity_content.zip" class="file-btn">unity content</a>
+      </div>
+    </div>
   </div>
 
-  <a href="index.html" class="back-btn">BACK</a>
+  <!-- ANIM2 -->
+  <div class="category">
+    <div class="category-header" onclick="toggle(this)">Anim2: Oswald</div>
+    <div class="category-content">
+      <div class="button-grid">
+        <a href="downloads/gallery/03_anim2/3d_content.zip" class="file-btn">3d content</a>
+        <a href="downloads/gallery/03_anim2/cinema_files.zip" class="file-btn">cinema files</a>
+        <a href="downloads/gallery/03_anim2/3d_backdrops.zip" class="file-btn">3d backdrops</a>
+        <a href="downloads/gallery/03_anim2/download_all_anim2.zip" class="file-btn">download all</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- WEBSITE -->
+  <div class="category">
+    <div class="category-header" onclick="toggle(this)">Website: Oswald, Kohlsdorf</div>
+    <div class="category-content">
+      <div class="button-grid">
+        <a href="downloads/gallery/04_website/website_files.zip" class="file-btn">website files</a>
+      </div>
+    </div>
+  </div>
+
+<!-- ALL -->
+<div class="category">
+  <div class="category-header" onclick="toggle(this)">Download all / link to onedrive</div>
+  <div class="category-content">
+    <div class="button-grid">
+
+      <!-- ZIP DOWNLOAD -->
+      <a href="downloads/gallery/05_all/download_all_files.zip" class="file-btn">
+        download all zip
+      </a>
+
+      <!-- ONEDRIVE LINK -->
+      <a href="https://your-onedrive-link-here" target="_blank" class="file-btn onedrive-btn">
+        open in onedrive
+      </a>
+
+    </div>
+  </div>
+</div>
 
 </div>
 
 <div class="footer">
-  LETTE DEVS - MIA_23
+  Developed by Emil and Emirhan
 </div>
+
+<script>
+
+function toggle(header) {
+  const allContents = document.querySelectorAll(".category-content");
+  const content = header.nextElementSibling;
+
+  allContents.forEach(c => {
+    if (c !== content) {
+      c.style.display = "none";
+    }
+  });
+
+  content.style.display = content.style.display === "block" ? "none" : "block";
+}
+
+/* Open first category by default */
+document.querySelector(".category-content").style.display = "block";
+
+</script>
 
 </body>
 </html>
