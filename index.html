@@ -33,11 +33,11 @@ body {
 /* ================= LOGO ================= */
 
 .logo {
-  margin-bottom:25px; /* closer to buttons */
+  margin-bottom:25px;
 }
 
 .logo img {
-  height:120px; /* slightly smaller */
+  height:120px;
 }
 
 /* ================= MENU ================= */
@@ -50,15 +50,15 @@ body {
 
 .button {
   display:block;
-  width:220px;              /* smaller width */
-  margin:18px auto;         /* tighter spacing */
-  padding:14px 0;           /* smaller padding */
+  width:220px;
+  margin:18px auto;
+  padding:14px 0;
   background:#ff2f92;
   color:white;
   text-decoration:none;
-  font-size:15px;           /* smaller text */
+  font-size:15px;
   font-weight:500;
-  text-transform:uppercase; /* CAPS */
+  text-transform:uppercase;
   border:6px solid #ff2f92;
   box-shadow:6px 6px 0 #00e5ff;
   transition:0.15s;
@@ -75,6 +75,28 @@ body {
   transform:translate(4px,4px);
 }
 
+/* ================= FOOTER NOTICE ================= */
+
+.notice {
+  position:fixed;
+  bottom:12px;
+  left:12px;
+  font-size:12px;
+  color:#9ca3af;
+  opacity:0.8;
+  max-width:320px;
+  line-height:1.4;
+}
+
+.notice a{
+  color:#00e5ff;
+  text-decoration:none;
+}
+
+.notice a:hover{
+  text-decoration:underline;
+}
+
 </style>
 </head>
 
@@ -89,6 +111,12 @@ body {
   <a class="button" href="steam.html">steam</a>
   <a class="button" href="shop.html">shop</a>
   <a class="button" href="gallery.html">gallery</a>
+</div>
+
+<div class="notice">
+Falls diese Seite langsam ist / Bilder nicht richtig angezeigt werden gehe auf die selbstgehostete Seite:
+<a href="https://scarfacesh.emilreichmann.de">scarfacesh.emilreichmann.de</a>.
+Diese Version ist auf einem langsamen Github Repo gehostet.
 </div>
 
 <script>
